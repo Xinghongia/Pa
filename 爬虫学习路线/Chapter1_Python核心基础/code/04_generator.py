@@ -74,7 +74,7 @@ def demo_memory_efficiency():
     n = 1000000
 
     # 列表：一次性生成所有元素
-    list_data = list(range(n))
+    list_data = list[int](range(n))
     print(f"列表大小: {sys.getsizeof(list_data):,} bytes")  # ~8MB
 
     # 生成器：按需生成

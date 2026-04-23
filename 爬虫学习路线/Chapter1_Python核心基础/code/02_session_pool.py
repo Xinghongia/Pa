@@ -31,7 +31,7 @@ def create_session_with_pool():
     - pool_connections: 维护多少个连接池（不同域名=不同池）
     - pool_maxsize: 每个池的最大连接数
     """
-    session = requests.Session()
+    session = requests.Session()   # ← Session自带连接池！
 
     # 配置重试策略
     retry_strategy = Retry(
