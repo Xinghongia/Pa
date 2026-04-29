@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>新闻列表</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .news-item { border: 1px solid #ddd; padding: 15px; margin: 15px 0; border-radius: 8px; }
+        .news-item .title a { color: #333; text-decoration: none; font-size: 18px; font-weight: bold; }
+        .meta span { margin-right: 15px; color: #666; }
+        .summary { color: #555; line-height: 1.6; }
+        .tag { background: #e0e0e0; padding: 2px 8px; margin: 2px; border-radius: 3px; font-size: 12px; }
+        .pagination { text-align: center; margin: 20px 0; }
+        .pagination a { margin: 0 5px; }
+    </style>
+</head>
+<body>
+    <div class="news-list">
+        <div class="news-item" data-id="20240115001">
+            <h2 class="title"><a href="/news/20240115001.html">Python 3.12正式发布：性能提升显著</a></h2>
+            <div class="meta">
+                <span class="source">来源：模拟新闻源A</span>
+                <span class="author">作者：张三</span>
+                <span class="date">2024-01-15 10:30:00</span>
+            </div>
+            <p class="summary">Python 3.12引入了多项性能优化，包括更快的启动时间和改进的调试功能。</p>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">编程</span>
+            </div>
+        </div>
+
+        <div class="news-item" data-id="20240115002">
+            <h2 class="title"><a href="/news/20240115002.html">Django 5.0正式发布：现代化Web开发</a></h2>
+            <div class="meta">
+                <span class="source">来源：模拟新闻源A</span>
+                <span class="author">作者：李四</span>
+                <span class="date">2024-01-15 09:20:00</span>
+            </div>
+            <p class="summary">Django 5.0带来了现代化的Web开发功能。</p>
+            <div class="tags">
+                <span class="tag">Django</span>
+                <span class="tag">Python</span>
+            </div>
+        </div>
+
+        <div class="news-item" data-id="20240114001">
+            <h2 class="title"><a href="/news/20240114001.html">人工智能在2024年的发展趋势</a></h2>
+            <div class="meta">
+                <span class="source">来源：模拟新闻源A</span>
+                <span class="author">作者：王五</span>
+                <span class="date">2024-01-14 16:45:00</span>
+            </div>
+            <p class="summary">AI技术在2024年将继续快速发展。</p>
+            <div class="tags">
+                <span class="tag">人工智能</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <span class="current">1</span>
+        <a href="?page=2" class="page-link">2</a>
+        <a href="?page=3" class="page-link">3</a>
+        <a href="?page=2" class="next-page">下一页</a>
+    </div>
+</body>
+</html>

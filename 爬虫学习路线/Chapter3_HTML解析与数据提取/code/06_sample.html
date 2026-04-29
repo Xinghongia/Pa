@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>新闻网站 - 最新资讯</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .site-header { background: #333; color: white; padding: 20px; }
+        .site-header .logo { font-size: 24px; margin: 0; }
+        .main-nav a { color: white; margin-right: 15px; text-decoration: none; }
+        .content { display: flex; gap: 20px; }
+        .news-section { flex: 3; }
+        .sidebar { flex: 1; }
+        .news-item { border: 1px solid #ddd; padding: 20px; margin: 15px 0; border-radius: 8px; }
+        .news-badge { background: #ff4444; color: white; padding: 2px 8px; border-radius: 3px; font-size: 12px; display: inline-block; margin-bottom: 10px; }
+        .news-title { margin: 10px 0; }
+        .news-title a { color: #333; text-decoration: none; font-size: 20px; }
+        .news-title a:hover { color: #007bff; }
+        .news-info span { margin-right: 15px; color: #666; font-size: 14px; }
+        .news-summary { color: #555; line-height: 1.8; margin: 15px 0; }
+        .tag { background: #e0e0e0; padding: 3px 10px; margin: 2px; border-radius: 3px; font-size: 12px; text-decoration: none; color: #333; }
+        .pagination { text-align: center; margin: 20px 0; }
+        .pagination span, .pagination a { margin: 0 5px; }
+        .widget { background: #f5f5f5; padding: 15px; border-radius: 5px; margin-bottom: 15px; }
+        .widget-title { margin-top: 0; }
+        .hot-list { list-style: none; padding: 0; }
+        .hot-list li { padding: 8px 0; border-bottom: 1px solid #ddd; }
+        .site-footer { background: #333; color: white; text-align: center; padding: 20px; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <h1 class="logo">新闻网站</h1>
+            <nav class="main-nav">
+                <a href="/">首页</a>
+                <a href="/tech">科技</a>
+                <a href="/sports">体育</a>
+            </nav>
+        </header>
+
+        <main class="content">
+            <section class="news-section">
+                <h2 class="section-title">最新新闻</h2>
+
+                <div class="news-list">
+                    <article class="news-item" data-id="20240115001">
+                        <div class="news-badge">置顶</div>
+                        <h3 class="news-title">
+                            <a href="/news/20240115001.html" target="_blank">
+                                Python 3.12正式发布：性能提升显著
+                            </a>
+                        </h3>
+                        <div class="news-info">
+                            <span class="category">科技</span>
+                            <span class="author">张三</span>
+                            <span class="publish-time">2024-01-15 10:30</span>
+                            <span class="views">1234浏览</span>
+                        </div>
+                        <p class="news-summary">
+                            Python 3.12引入了多项性能优化，包括更快的启动时间和改进的调试功能。
+                            新版本还带来了更清晰的错误信息和更好的类型提示支持。
+                        </p>
+                        <div class="news-tags">
+                            <a href="/tag/python" class="tag">Python</a>
+                            <a href="/tag/programming" class="tag">编程</a>
+                        </div>
+                    </article>
+
+                    <article class="news-item" data-id="20240115002">
+                        <h3 class="news-title">
+                            <a href="/news/20240115002.html">
+                                Django 5.0正式发布：现代化Web开发
+                            </a>
+                        </h3>
+                        <div class="news-info">
+                            <span class="category">科技</span>
+                            <span class="author">李四</span>
+                            <span class="publish-time">2024-01-15 09:20</span>
+                            <span class="views">890浏览</span>
+                        </div>
+                        <p class="news-summary">
+                            Django 5.0带来了现代化的Web开发功能，包括简化的表单处理和改进的异步支持。
+                        </p>
+                        <div class="news-tags">
+                            <a href="/tag/django" class="tag">Django</a>
+                            <a href="/tag/python" class="tag">Python</a>
+                        </div>
+                    </article>
+
+                    <article class="news-item" data-id="20240114001">
+                        <h3 class="news-title">
+                            <a href="/news/20240114001.html">
+                                人工智能在2024年的发展趋势
+                            </a>
+                        </h3>
+                        <div class="news-info">
+                            <span class="category">科技</span>
+                            <span class="author">王五</span>
+                            <span class="publish-time">2024-01-14 16:45</span>
+                            <span class="views">2345浏览</span>
+                        </div>
+                        <p class="news-summary">
+                            AI技术在2024年将继续快速发展，特别是大语言模型和生成式AI的应用。
+                        </p>
+                        <div class="news-tags">
+                            <a href="/tag/ai" class="tag">人工智能</a>
+                            <a href="/tag/tech" class="tag">科技</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="pagination">
+                    <span class="current">1</span>
+                    <a href="?page=2" class="page-link">2</a>
+                    <a href="?page=3" class="page-link">3</a>
+                    <a href="?page=2" class="next-page">下一页</a>
+                </div>
+            </section>
+
+            <aside class="sidebar">
+                <div class="widget hot-news">
+                    <h3 class="widget-title">热门新闻</h3>
+                    <ul class="hot-list">
+                        <li><a href="/news/hot1.html">新闻热点1</a></li>
+                        <li><a href="/news/hot2.html">新闻热点2</a></li>
+                        <li><a href="/news/hot3.html">新闻热点3</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2024 新闻网站 - 专注于最新资讯</p>
+        </footer>
+    </div>
+</body>
+</html>

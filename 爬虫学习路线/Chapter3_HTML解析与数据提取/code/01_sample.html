@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS选择器演示</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .news-item { border: 1px solid #ddd; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .news-title a { color: #333; text-decoration: none; font-size: 18px; }
+        .news-meta span { margin-right: 15px; color: #666; }
+        .tag { background: #e0e0e0; padding: 2px 8px; margin: 2px; border-radius: 3px; font-size: 12px; }
+        .news-summary { color: #555; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar">
+            <a href="/" class="logo">网站Logo</a>
+            <ul class="nav-list">
+                <li><a href="/home">首页</a></li>
+                <li><a href="/news">新闻</a></li>
+                <li><a href="/about">关于我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="news-section">
+            <h1 class="section-title">最新新闻</h1>
+
+            <div class="news-list">
+                <article class="news-item" data-id="1001">
+                    <h2 class="news-title">
+                        <a href="/news/1001.html" target="_blank">Python 3.12 正式发布</a>
+                    </h2>
+                    <div class="news-meta">
+                        <span class="author">作者：张三</span>
+                        <span class="date">2024-01-15</span>
+                        <span class="views">阅读：1234</span>
+                    </div>
+                    <p class="news-summary">Python 3.12引入了多项性能优化和改进...</p>
+                    <div class="tags">
+                        <span class="tag" data-tag="python">Python</span>
+                        <span class="tag" data-tag="programming">编程</span>
+                    </div>
+                </article>
+
+                <article class="news-item" data-id="1002">
+                    <h2 class="news-title">
+                        <a href="/news/1002.html">Django 5.0 发布</a>
+                    </h2>
+                    <div class="news-meta">
+                        <span class="author">作者：李四</span>
+                        <span class="date">2024-01-14</span>
+                        <span class="views">阅读：890</span>
+                    </div>
+                    <p class="news-summary">Django 5.0带来了新的表单组件和功能...</p>
+                    <div class="tags">
+                        <span class="tag" data-tag="django">Django</span>
+                        <span class="tag" data-tag="python">Python</span>
+                    </div>
+                </article>
+
+                <article class="news-item" data-id="1003">
+                    <h2 class="news-title">
+                        <a href="/news/1003.html">Web开发趋势展望</a>
+                    </h2>
+                    <div class="news-meta">
+                        <span class="author">作者：王五</span>
+                        <span class="date">2024-01-13</span>
+                        <span class="views">阅读：567</span>
+                    </div>
+                    <p class="news-summary">2024年Web开发将有哪些新趋势...</p>
+                    <div class="tags">
+                        <span class="tag" data-tag="web">Web</span>
+                        <span class="tag" data-tag="frontend">前端</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <div class="widget">
+                <h3 class="widget-title">热门标签</h3>
+                <div class="tag-cloud">
+                    <a href="/tag/python" class="tag-link">Python</a>
+                    <a href="/tag/javascript" class="tag-link">JavaScript</a>
+                    <a href="/tag/django" class="tag-link">Django</a>
+                    <a href="/tag/react" class="tag-link">React</a>
+                </div>
+            </div>
+
+            <div class="widget">
+                <h3 class="widget-title">最新评论</h3>
+                <ul class="comment-list">
+                    <li class="comment-item">用户A：写得很好！</li>
+                    <li class="comment-item">用户B：感谢分享</li>
+                    <li class="comment-item">用户C：期待更新</li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer id="footer">
+        <p>&copy; 2024 学习网站</p>
+    </footer>
+</body>
+</html>
